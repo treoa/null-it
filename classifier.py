@@ -52,7 +52,7 @@ class MyDataset(Dataset):
 # data = dataiter.next()
 
 
-class MyDataset(pl.LightningDataModule):
+class MyDatasets(pl.LightningDataModule):
     def __init__(self, data_dir: str = './income_evaluation.csv', batch_size: int = 32):
         super().__init__()
         self.batch_size = batch_size
@@ -64,8 +64,9 @@ class MyDataset(pl.LightningDataModule):
     def setup(self) -> None:
         self.cur_dataset = MyDataset()
         transform = transforms.Compose([transforms.ToTensor])
-        lengths = [int(len(self.cur_dataset)) * 0.8, int(len(self.cur_dataset)) * 0.2]
-        self.train_data, self.val_data = random_split(self.cur_dataset, lengths=lengths)
+        first = int(len(my_dataset) * 0.8)
+        self.lengths = [first, int(len(self.cur_dataset) - first)]
+        self.train_data, self.val_data = random_split(self.cur_dataset, lengths=self.lengths)
 
     def train_dataloader(self):
         print(f"Loaded the train dataloader")
@@ -76,25 +77,31 @@ class MyDataset(pl.LightningDataModule):
         return DataLoader(self.val_data, batch_size=self.batch_size)
 
 
-class LinearModel (pl.LightningModule):
+class LinearModel(pl.LightningModule):
     def __init__(self, dims) -> None:
-        super(LinearModel, self).__init__()
+        super().__init__()
         print(f"Initializing the model")
-        self.l1 = nn.Linear(dims, 64)
-        self.l2 = nn.Linear(64, 1)
+        self.l1 = nn.Linear(np.prod(dims), 32)
+        self.l2 = nn.Linear(32, 1)
         self.do = nn.Dropout(0.16)
         self.lr = 1e-5
-        self.batch_size = 32
+        self.dim = dims
+        self.batch_size = 64
         self.cur_dataset = MyDataset()
-        self.lengths = [int(len(self.cur_dataset)) * 0.8, int(len(self.cur_dataset)) * 0.2]
+        first = int(len(my_dataset) * 0.8)
+        self.lengths = [first, int(len(self.cur_dataset) - first)]
         self.train_data, self.val_data = random_split(self.cur_dataset, lengths=self.lengths)
         self.save_hyperparameters()
         self.train_acc = pl.metrics.Accuracy()
         self.valid_acc = pl.metrics.Accuracy()
 
     def forward(self, x) -> Any:
-        h1 = F.relu(self.linear(x))
+        x = self.l1(x)
+        print(f"\n\nThe x1 is {x.shape}\n\n\n")
+        h1 = F.relu(x)
+        print(f"The x2 is {x.shape}\n\n\n")
         do = self.do(h1)
+        print(f"The x3 is {x.shape}\n\n\n")
         out = self.l2(do)
         out = F.log_softmax(out, dim=1)
         return torch.reshape(out, (-1, ))
@@ -127,6 +134,7 @@ class LinearModel (pl.LightningModule):
     
     def validation_step(self, batch, batch_idx):
         x, y = batch
+        print(f"I am in the validation step and the shape fo x is {x.shape}")
         logits = self(x)
         loss = F.binary_cross_entropy_with_logits(logits, y)
         preds = torch.argmax(logits, 1)
@@ -141,11 +149,13 @@ class LinearModel (pl.LightningModule):
 
 
 my_dataset = MyDataset()
-lengths = [int(len(my_dataset)) * 0.8, int(len(my_dataset)) * 0.2]
+first = int(len(my_dataset) * 0.8)
+lengths = [first, int(len(my_dataset) - first)]
 train_data, val_data = random_split(my_dataset, lengths=lengths)
-train_loader = DataLoader(train_data, batch_size=32)
+train_loader = DataLoader(train_data, batch_size=64)
 wandb_logger = WandbLogger()
-model = LinearModel(dims = 88)
+model = LinearModel(dims = 64)
+print(f"The overview of datastet: {model}")
 trainer = pl.Trainer(gpus=1, progress_bar_refresh_rate = 8, max_epochs = 20, logger = wandb_logger)
-trainer.fit()
+trainer.fit(model, train_loader)
 
