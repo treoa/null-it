@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.11.0-7614-generic-x86_64-with-glibc2.10",
+    "python": "3.8.10",
+    "heartbeatAt": "2021-06-14T02:02:56.312692",
+    "startedAt": "2021-06-14T02:02:54.588351",
+    "docker": null,
+    "gpu": "GeForce GTX 1050",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "classifier.py",
+    "codePath": "classifier.py",
+    "git": {
+        "remote": "https://github.com/treoa/null-it.git",
+        "commit": "95620b6482f9501392e9f246a1a8db7c8c2fa08e"
+    },
+    "email": "suleymenov.anuar.01@gmail.com",
+    "root": "/home/treoroygbiv/Projects/null_it_out_implementation/null-it",
+    "host": "pop-os",
+    "username": "treoroygbiv",
+    "executable": "/home/treoroygbiv/anaconda3/envs/treo/bin/python"
+}

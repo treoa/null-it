@@ -81,13 +81,15 @@ class LinearModel(pl.LightningModule):
     def __init__(self, dims) -> None:
         super().__init__()
         print(f"Initializing the model")
-        self.l1 = nn.Linear(np.prod(dims), 32)
-        self.l2 = nn.Linear(32, 1)
+        self.l1 = nn.Linear(14, 64)
+        self.l2 = nn.Linear(64, 2)
         self.do = nn.Dropout(0.16)
+        self.out = nn.Sigmoid()
         self.lr = 1e-5
         self.dim = dims
         self.batch_size = 64
         self.cur_dataset = MyDataset()
+        self.loss_fn = nn.CrossEntropyLoss()
         first = int(len(my_dataset) * 0.8)
         self.lengths = [first, int(len(self.cur_dataset) - first)]
         self.train_data, self.val_data = random_split(self.cur_dataset, lengths=self.lengths)
@@ -96,23 +98,21 @@ class LinearModel(pl.LightningModule):
         self.valid_acc = pl.metrics.Accuracy()
 
     def forward(self, x) -> Any:
-        x = self.l1(x)
-        print(f"\n\nThe x1 is {x.shape}\n\n\n")
-        h1 = F.relu(x)
-        print(f"The x2 is {x.shape}\n\n\n")
-        do = self.do(h1)
-        print(f"The x3 is {x.shape}\n\n\n")
-        out = self.l2(do)
-        out = F.log_softmax(out, dim=1)
-        return torch.reshape(out, (-1, ))
+        batch_size, *dims = x.size()
+        x = x.view(batch_size, -1)
+        # print(f"\n\nThe x1 is {x.shape}\n\n\n")
+        x = F.relu(self.l1(x))
+        out = self.l2(x)
+        # print(f"The x2 is {x.shape}\n\n\n")
+        out = self.do(out)
+        out = self.out(out)
+        # print(f"The x3 is {x.shape}\n\n\n")
+        # out = F.log_softmax(out, dim=1)
+        print(f"Exiting the forward fn with shape {out.shape}")
+        return out
     
     def configure_optimizers(self):
         return optim.SGD(self.parameters(), lr = self.lr)
-    
-    # def training_step(self, batch, batch_idx):
-    #     x, y = batch
-    #     l = self(x)
-    #     loss = self.loss(l, y)
 
     def train_dataloader(self):
         print(f"Loaded the train dataloader")
@@ -120,8 +120,10 @@ class LinearModel(pl.LightningModule):
 
     def training_step(self, batch, batch_idx):
         x, y = batch
+        print(f"My batch is {batch}")
         logits = self(x)
-        loss = F.binary_cross_entropy_with_logits(logits, y)
+        print(f"\n\n\nI am in the training step and the shapes of logits and y are given respectively {logits.shape}\n\n {y.shape}\n\n\n")
+        loss = self.loss_fn(logits, y.long())
         preds = torch.argmax(logits, 1)
         self.log('train/loss', loss, on_epoch=True)
         self.train_acc(preds, y)
@@ -134,9 +136,12 @@ class LinearModel(pl.LightningModule):
     
     def validation_step(self, batch, batch_idx):
         x, y = batch
+        y = torch.flatten(y)
+        print(f"My batch is {batch}")
         print(f"I am in the validation step and the shape fo x is {x.shape}")
         logits = self(x)
-        loss = F.binary_cross_entropy_with_logits(logits, y)
+        print(f"\n\n\nI am in the validation step and the shapes of logits and y are given respectively {logits.shape}\n\n {y.shape}\n\n\n")
+        loss = self.loss_fn(logits, y.long())
         preds = torch.argmax(logits, 1)
         self.valid_acc(preds, y)
         self.log("valid/loss_epoch", loss)

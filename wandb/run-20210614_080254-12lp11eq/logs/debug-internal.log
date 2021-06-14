@@ -1,0 +1,134 @@
+2021-06-14 08:02:55,000 INFO    MainThread:9944 [internal.py:wandb_internal():88] W&B internal server running at pid: 9944, started at: 2021-06-14 08:02:55.000723
+2021-06-14 08:02:55,002 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: check_version
+2021-06-14 08:02:55,003 INFO    WriterThread:9944 [datastore.py:open_for_write():80] open: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/run-12lp11eq.wandb
+2021-06-14 08:02:55,003 DEBUG   SenderThread:9944 [sender.py:send():179] send: header
+2021-06-14 08:02:55,003 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: check_version
+2021-06-14 08:02:55,405 DEBUG   SenderThread:9944 [sender.py:send():179] send: run
+2021-06-14 08:02:55,410 INFO    SenderThread:9944 [sender.py:_maybe_setup_resume():401] checking resume status for None/null-it/12lp11eq
+2021-06-14 08:02:56,309 INFO    SenderThread:9944 [dir_watcher.py:__init__():168] watching files in: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files
+2021-06-14 08:02:56,309 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: run_start
+2021-06-14 08:02:56,309 INFO    SenderThread:9944 [sender.py:_start_run_threads():704] run started: 12lp11eq with start time 1623636174
+2021-06-14 08:02:56,310 DEBUG   SenderThread:9944 [sender.py:send():179] send: summary
+2021-06-14 08:02:56,310 INFO    SenderThread:9944 [sender.py:_save_file():829] saving file wandb-summary.json with policy end
+2021-06-14 08:02:56,312 DEBUG   HandlerThread:9944 [meta.py:__init__():39] meta init
+2021-06-14 08:02:56,312 DEBUG   HandlerThread:9944 [meta.py:__init__():53] meta init done
+2021-06-14 08:02:56,312 DEBUG   HandlerThread:9944 [meta.py:probe():210] probe
+2021-06-14 08:02:56,318 DEBUG   HandlerThread:9944 [meta.py:_setup_git():200] setup git
+2021-06-14 08:02:56,326 DEBUG   HandlerThread:9944 [meta.py:_setup_git():207] setup git done
+2021-06-14 08:02:56,326 DEBUG   HandlerThread:9944 [meta.py:_save_pip():57] save pip
+2021-06-14 08:02:56,326 DEBUG   HandlerThread:9944 [meta.py:_save_pip():71] save pip done
+2021-06-14 08:02:56,326 DEBUG   HandlerThread:9944 [meta.py:_save_conda():78] save conda
+2021-06-14 08:02:57,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/requirements.txt
+2021-06-14 08:02:57,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/conda-environment.yaml
+2021-06-14 08:02:57,311 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/wandb-summary.json
+2021-06-14 08:02:58,309 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/conda-environment.yaml
+2021-06-14 08:02:58,366 DEBUG   HandlerThread:9944 [meta.py:_save_conda():86] save conda done
+2021-06-14 08:02:58,366 DEBUG   HandlerThread:9944 [meta.py:probe():252] probe done
+2021-06-14 08:02:58,388 DEBUG   SenderThread:9944 [sender.py:send():179] send: files
+2021-06-14 08:02:58,388 INFO    SenderThread:9944 [sender.py:_save_file():829] saving file wandb-metadata.json with policy now
+2021-06-14 08:02:58,392 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: stop_status
+2021-06-14 08:02:58,392 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: stop_status
+2021-06-14 08:02:58,829 DEBUG   SenderThread:9944 [sender.py:send():179] send: metric
+2021-06-14 08:02:58,829 DEBUG   SenderThread:9944 [sender.py:send():179] send: metric
+2021-06-14 08:02:58,830 WARNING SenderThread:9944 [sender.py:send_metric():787] Seen metric with glob (shouldnt happen)
+2021-06-14 08:02:58,830 DEBUG   SenderThread:9944 [sender.py:send():179] send: config
+2021-06-14 08:02:59,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/output.log
+2021-06-14 08:02:59,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/wandb-metadata.json
+2021-06-14 08:02:59,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/null-it/12lp11eq
+2021-06-14 08:02:59,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/null-it
+2021-06-14 08:02:59,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/null-it/12lp11eq/checkpoints
+2021-06-14 08:02:59,441 INFO    Thread-11 :9944 [upload_job.py:push():133] Uploaded file /tmp/tmpim_2v9ozwandb/3cpkend9-wandb-metadata.json
+2021-06-14 08:03:00,310 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/output.log
+2021-06-14 08:03:00,311 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/config.yaml
+2021-06-14 08:03:00,958 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: poll_exit
+2021-06-14 08:03:00,958 DEBUG   SenderThread:9944 [sender.py:send():179] send: telemetry
+2021-06-14 08:03:00,959 DEBUG   SenderThread:9944 [sender.py:send():179] send: exit
+2021-06-14 08:03:00,959 INFO    SenderThread:9944 [sender.py:send_exit():287] handling exit code: 1
+2021-06-14 08:03:00,960 INFO    SenderThread:9944 [sender.py:send_exit():295] send defer
+2021-06-14 08:03:00,960 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: poll_exit
+2021-06-14 08:03:00,961 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:00,961 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 0
+2021-06-14 08:03:00,962 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:00,962 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 0
+2021-06-14 08:03:00,963 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 1
+2021-06-14 08:03:00,964 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:00,964 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 1
+2021-06-14 08:03:01,075 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:01,075 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 1
+2021-06-14 08:03:01,075 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 2
+2021-06-14 08:03:01,075 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: poll_exit
+2021-06-14 08:03:01,075 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:01,075 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: poll_exit
+2021-06-14 08:03:01,075 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 2
+2021-06-14 08:03:01,076 DEBUG   SenderThread:9944 [sender.py:send():179] send: stats
+2021-06-14 08:03:01,076 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:01,076 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 2
+2021-06-14 08:03:01,076 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 3
+2021-06-14 08:03:01,076 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:01,077 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 3
+2021-06-14 08:03:01,077 DEBUG   SenderThread:9944 [sender.py:send():179] send: summary
+2021-06-14 08:03:01,077 INFO    SenderThread:9944 [sender.py:_save_file():829] saving file wandb-summary.json with policy end
+2021-06-14 08:03:01,077 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:01,077 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 3
+2021-06-14 08:03:01,077 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 4
+2021-06-14 08:03:01,077 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:01,078 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 4
+2021-06-14 08:03:01,078 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:01,078 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 4
+2021-06-14 08:03:01,178 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: poll_exit
+2021-06-14 08:03:01,312 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/output.log
+2021-06-14 08:03:01,312 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/wandb-summary.json
+2021-06-14 08:03:01,556 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 5
+2021-06-14 08:03:01,556 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: poll_exit
+2021-06-14 08:03:01,557 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:01,558 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 5
+2021-06-14 08:03:01,558 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:01,558 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 5
+2021-06-14 08:03:01,559 INFO    SenderThread:9944 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-06-14 08:03:01,660 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: poll_exit
+2021-06-14 08:03:02,313 WARNING MainThread:9944 [internal.py:wandb_internal():147] Internal process interrupt: 1
+2021-06-14 08:03:02,313 INFO    Thread-8  :9944 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/config.yaml
+2021-06-14 08:03:02,314 INFO    SenderThread:9944 [dir_watcher.py:finish():312] scan: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files
+2021-06-14 08:03:02,315 INFO    SenderThread:9944 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/conda-environment.yaml conda-environment.yaml
+2021-06-14 08:03:02,315 INFO    SenderThread:9944 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/config.yaml config.yaml
+2021-06-14 08:03:02,316 INFO    SenderThread:9944 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/wandb-metadata.json wandb-metadata.json
+2021-06-14 08:03:02,316 INFO    SenderThread:9944 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/wandb-summary.json wandb-summary.json
+2021-06-14 08:03:02,317 INFO    SenderThread:9944 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/requirements.txt requirements.txt
+2021-06-14 08:03:02,318 INFO    SenderThread:9944 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/output.log output.log
+2021-06-14 08:03:02,322 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 6
+2021-06-14 08:03:02,322 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: poll_exit
+2021-06-14 08:03:02,323 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:02,323 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 6
+2021-06-14 08:03:02,325 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:02,326 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 6
+2021-06-14 08:03:02,326 INFO    SenderThread:9944 [file_pusher.py:finish():176] shutting down file pusher
+2021-06-14 08:03:02,328 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 7
+2021-06-14 08:03:02,328 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:02,328 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 7
+2021-06-14 08:03:02,328 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:02,329 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 7
+2021-06-14 08:03:02,850 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 8
+2021-06-14 08:03:02,851 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:02,851 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 8
+2021-06-14 08:03:02,852 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:02,852 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 8
+2021-06-14 08:03:02,852 INFO    SenderThread:9944 [sender.py:send_request_defer():342] send defer: 9
+2021-06-14 08:03:02,854 DEBUG   HandlerThread:9944 [handler.py:handle_request():124] handle_request: defer
+2021-06-14 08:03:02,855 INFO    HandlerThread:9944 [handler.py:handle_request_defer():141] handle defer: 9
+2021-06-14 08:03:02,855 DEBUG   SenderThread:9944 [sender.py:send():179] send: final
+2021-06-14 08:03:02,856 DEBUG   SenderThread:9944 [sender.py:send():179] send: footer
+2021-06-14 08:03:02,856 DEBUG   SenderThread:9944 [sender.py:send_request():193] send_request: defer
+2021-06-14 08:03:02,856 INFO    SenderThread:9944 [sender.py:send_request_defer():304] handle sender defer: 9
+2021-06-14 08:03:03,393 INFO    Thread-13 :9944 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/config.yaml
+2021-06-14 08:03:04,316 WARNING MainThread:9944 [internal.py:is_dead():366] Internal process exiting, parent pid 9920 disappeared
+2021-06-14 08:03:04,316 ERROR   MainThread:9944 [internal.py:wandb_internal():143] Internal process shutdown.
+2021-06-14 08:03:04,856 INFO    WriterThread:9944 [datastore.py:close():288] close: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/run-12lp11eq.wandb
+2021-06-14 08:03:04,857 INFO    SenderThread:9944 [sender.py:finish():933] shutting down sender
+2021-06-14 08:03:04,857 INFO    SenderThread:9944 [file_pusher.py:finish():176] shutting down file pusher
+2021-06-14 08:03:04,857 INFO    SenderThread:9944 [file_pusher.py:join():181] waiting for file pusher
+2021-06-14 08:03:04,857 INFO    HandlerThread:9944 [handler.py:finish():638] shutting down handler
+2021-06-14 08:03:08,423 INFO    Thread-14 :9944 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/wandb-summary.json
+2021-06-14 08:03:13,554 INFO    Thread-12 :9944 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/conda-environment.yaml
+2021-06-14 08:03:15,589 INFO    Thread-15 :9944 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/requirements.txt
+2021-06-14 08:03:18,676 INFO    Thread-16 :9944 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_080254-12lp11eq/files/output.log
+2021-06-14 08:03:19,378 INFO    MainThread:9944 [internal.py:handle_exit():78] Internal process exited

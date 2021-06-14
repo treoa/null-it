@@ -1,0 +1,62 @@
+2021-06-14 09:29:57,814 INFO    MainThread:12603 [internal.py:wandb_internal():88] W&B internal server running at pid: 12603, started at: 2021-06-14 09:29:57.814591
+2021-06-14 09:29:57,816 INFO    WriterThread:12603 [datastore.py:open_for_write():80] open: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/run-297cxwgi.wandb
+2021-06-14 09:29:57,816 DEBUG   HandlerThread:12603 [handler.py:handle_request():124] handle_request: check_version
+2021-06-14 09:29:57,817 DEBUG   SenderThread:12603 [sender.py:send():179] send: header
+2021-06-14 09:29:57,817 DEBUG   SenderThread:12603 [sender.py:send_request():193] send_request: check_version
+2021-06-14 09:30:00,258 DEBUG   SenderThread:12603 [sender.py:send():179] send: run
+2021-06-14 09:30:00,263 INFO    SenderThread:12603 [sender.py:_maybe_setup_resume():401] checking resume status for None/null-it/297cxwgi
+2021-06-14 09:30:01,198 INFO    SenderThread:12603 [dir_watcher.py:__init__():168] watching files in: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files
+2021-06-14 09:30:01,198 INFO    SenderThread:12603 [sender.py:_start_run_threads():704] run started: 297cxwgi with start time 1623641397
+2021-06-14 09:30:01,198 DEBUG   SenderThread:12603 [sender.py:send():179] send: summary
+2021-06-14 09:30:01,198 INFO    SenderThread:12603 [sender.py:_save_file():829] saving file wandb-summary.json with policy end
+2021-06-14 09:30:01,198 DEBUG   HandlerThread:12603 [handler.py:handle_request():124] handle_request: run_start
+2021-06-14 09:30:01,201 DEBUG   HandlerThread:12603 [meta.py:__init__():39] meta init
+2021-06-14 09:30:01,201 DEBUG   HandlerThread:12603 [meta.py:__init__():53] meta init done
+2021-06-14 09:30:01,201 DEBUG   HandlerThread:12603 [meta.py:probe():210] probe
+2021-06-14 09:30:01,207 DEBUG   HandlerThread:12603 [meta.py:_setup_git():200] setup git
+2021-06-14 09:30:01,216 DEBUG   HandlerThread:12603 [meta.py:_setup_git():207] setup git done
+2021-06-14 09:30:01,216 DEBUG   HandlerThread:12603 [meta.py:_save_pip():57] save pip
+2021-06-14 09:30:01,216 DEBUG   HandlerThread:12603 [meta.py:_save_pip():71] save pip done
+2021-06-14 09:30:01,216 DEBUG   HandlerThread:12603 [meta.py:_save_conda():78] save conda
+2021-06-14 09:30:02,199 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/conda-environment.yaml
+2021-06-14 09:30:02,200 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/wandb-summary.json
+2021-06-14 09:30:02,201 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/requirements.txt
+2021-06-14 09:30:03,156 DEBUG   HandlerThread:12603 [meta.py:_save_conda():86] save conda done
+2021-06-14 09:30:03,156 DEBUG   HandlerThread:12603 [meta.py:probe():252] probe done
+2021-06-14 09:30:03,178 DEBUG   SenderThread:12603 [sender.py:send():179] send: files
+2021-06-14 09:30:03,178 INFO    SenderThread:12603 [sender.py:_save_file():829] saving file wandb-metadata.json with policy now
+2021-06-14 09:30:03,182 DEBUG   HandlerThread:12603 [handler.py:handle_request():124] handle_request: stop_status
+2021-06-14 09:30:03,182 DEBUG   SenderThread:12603 [sender.py:send_request():193] send_request: stop_status
+2021-06-14 09:30:03,198 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/conda-environment.yaml
+2021-06-14 09:30:03,199 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/wandb-metadata.json
+2021-06-14 09:30:03,199 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/output.log
+2021-06-14 09:30:03,200 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/null-it
+2021-06-14 09:30:03,200 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/null-it/297cxwgi
+2021-06-14 09:30:03,200 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_created():216] file/dir created: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/null-it/297cxwgi/checkpoints
+2021-06-14 09:30:03,623 DEBUG   SenderThread:12603 [sender.py:send():179] send: metric
+2021-06-14 09:30:03,624 DEBUG   SenderThread:12603 [sender.py:send():179] send: metric
+2021-06-14 09:30:03,624 WARNING SenderThread:12603 [sender.py:send_metric():787] Seen metric with glob (shouldnt happen)
+2021-06-14 09:30:03,624 DEBUG   SenderThread:12603 [sender.py:send():179] send: config
+2021-06-14 09:30:03,773 WARNING MainThread:12603 [internal.py:wandb_internal():147] Internal process interrupt: 1
+2021-06-14 09:30:04,179 INFO    Thread-11 :12603 [upload_job.py:push():133] Uploaded file /tmp/tmphwmsxrxcwandb/cod0ra12-wandb-metadata.json
+2021-06-14 09:30:05,200 INFO    Thread-8  :12603 [dir_watcher.py:_on_file_modified():229] file/dir modified: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/config.yaml
+2021-06-14 09:30:07,778 WARNING MainThread:12603 [internal.py:is_dead():366] Internal process exiting, parent pid 12578 disappeared
+2021-06-14 09:30:07,778 ERROR   MainThread:12603 [internal.py:wandb_internal():143] Internal process shutdown.
+2021-06-14 09:30:08,084 INFO    SenderThread:12603 [sender.py:finish():933] shutting down sender
+2021-06-14 09:30:08,084 INFO    SenderThread:12603 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-06-14 09:30:08,185 INFO    WriterThread:12603 [datastore.py:close():288] close: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/run-297cxwgi.wandb
+2021-06-14 09:30:08,190 INFO    HandlerThread:12603 [handler.py:finish():638] shutting down handler
+2021-06-14 09:30:08,202 INFO    SenderThread:12603 [dir_watcher.py:finish():312] scan: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files
+2021-06-14 09:30:08,203 INFO    SenderThread:12603 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/conda-environment.yaml conda-environment.yaml
+2021-06-14 09:30:08,203 INFO    SenderThread:12603 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/config.yaml config.yaml
+2021-06-14 09:30:08,212 INFO    SenderThread:12603 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/wandb-metadata.json wandb-metadata.json
+2021-06-14 09:30:08,213 INFO    SenderThread:12603 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/wandb-summary.json wandb-summary.json
+2021-06-14 09:30:08,213 INFO    SenderThread:12603 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/requirements.txt requirements.txt
+2021-06-14 09:30:08,214 INFO    SenderThread:12603 [dir_watcher.py:finish():318] scan save: /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/output.log output.log
+2021-06-14 09:30:08,225 INFO    SenderThread:12603 [file_pusher.py:finish():176] shutting down file pusher
+2021-06-14 09:30:08,225 INFO    SenderThread:12603 [file_pusher.py:join():181] waiting for file pusher
+2021-06-14 09:30:09,323 INFO    Thread-12 :12603 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/conda-environment.yaml
+2021-06-14 09:30:15,363 INFO    Thread-14 :12603 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/wandb-summary.json
+2021-06-14 09:30:19,590 INFO    Thread-13 :12603 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/config.yaml
+2021-06-14 09:30:26,691 INFO    Thread-15 :12603 [upload_job.py:push():133] Uploaded file /home/treoroygbiv/Projects/null_it_out_implementation/null-it/wandb/run-20210614_092957-297cxwgi/files/requirements.txt
+2021-06-14 09:30:27,503 INFO    MainThread:12603 [internal.py:handle_exit():78] Internal process exited
